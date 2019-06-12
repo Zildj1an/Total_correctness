@@ -20,7 +20,7 @@ inline int sum_digits(int *a, int N){
    {N >= 0} → {true}
    Proved {p} → {I} (1)
   */
-  k = 0; 
+  k := 0; 
   /* Axiom of substitution
    {0 = ∑ (i = 0, i = k-1) a[i]}
   */
