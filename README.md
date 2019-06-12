@@ -1,2 +1,2 @@
-# total_correctness
-Demonstration on how to mathematically probe total correctness (and partial) of a simple program
+# Total_correctness
+Demonstration on how to mathematically probe total correctness (and partial) of a simple program.
