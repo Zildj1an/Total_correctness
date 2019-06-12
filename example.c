@@ -64,7 +64,7 @@ inline int sum_digits(int *a, int N){
   (2) {I ∧ B } → {I} 
   (3) {(I ∧ ¬B)} → {q}
   
-  Hence 
+  Hence ⊧p {p} S {q}
   
 */
 
