@@ -1,11 +1,23 @@
+/* This will not compile (special notation). */
+#include <stdio.h>
+
+int main(void){
+  int N := 4; 
+  int a[N] := {1,2,2,1};
+  int sum := sum_digits(a,N);
+  
+ return 0;
+}
+
 /* 
  PRECONDITION: {N >= 0} 
  POSTCONDITION: {x = ∑ (i = 0, i = N-1) a[i]} 
  
- This will not compile without a main. Also,
  in order to distinguish logical equivalents from instructions
  I will use ':=' for instructions.
  The program computes the sum of values of an array a.
+ 
+ I will prove backwards been that {w [u:= t]} u := t {w}
  
 */
 
@@ -53,13 +65,16 @@ inline int sum_digits(int *a, int N){
   /* Identical Substitution Lemma
      {x = ∑ (i = 0, i = k-1) a[i]}
   */
-  /* THIS IS EQUIVALENT TO INSTRUCTION SKIP */
+ 
+  /* THIS EMPTY SPACE IS EQUIVALENT TO INSTRUCTION SKIP */
+ 
   /* Invariant I = {x = ∑ (i = 0, i = k-1) a[i]} */
-  return x;
+ 
+ return x;
 }
 /* {x = ∑ (i = 0, i = N-1) a[i]} */
 
-/* We have proved:
+/* We have proved backwards:
   (1) {p} → {I} 
   (2) {I ∧ B } → {I} 
   (3) {(I ∧ ¬B)} → {q}
@@ -67,7 +82,6 @@ inline int sum_digits(int *a, int N){
   Hence ⊧p {p} S {q}
   
 */
-
 
 
 /* Total Correctness: ************************/
