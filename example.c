@@ -17,7 +17,7 @@ int main(void){
  I will use ':=' for instructions.
  The program computes the sum of values of an array a.
  
- I will prove backwards been that {w [u:= t]} u := t {w} 
+ I will prove backwards being that {w [u:= t]} u := t {w} 
 */
 
 /* Partial Correctness: ************************/
