@@ -1,5 +1,5 @@
 # Total_correctness
-Demonstration on how to mathematically prove a sequential program terminates and its "correct" in the sense of
+File sequential.c is a demonstration on how to mathematically prove a sequential program terminates and its "correct" in the sense of
 total correctness (and partial) of a simple program.
 
 * _Partial correctness_ means that if the σ state's values satisfy p then σ' of the output will satisfy q.
