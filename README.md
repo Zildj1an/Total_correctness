@@ -1,6 +1,6 @@
 # Total_correctness
 
-These repository contains demonstrations on how to prove correctness for both sequential and lock-free concurrent objects.
+This repository contains demonstrations on how to prove correctness for both sequential and lock-free concurrent objects.
 
 ## 1. Sequential Prove
 
