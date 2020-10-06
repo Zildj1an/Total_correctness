@@ -30,7 +30,7 @@ It is easy to prove a concurrent object is correct (deadlock freedom, liveness, 
 
 In order to prove correctness of a lock-free concurrent object we need to show it is linearizable. With Linearizability we map the concurrent object to a sequential object that can be analyzed. Formally, we can describe linearizability by defining:
 
-1. Each method call has an invocation and a return, that can be a value or an exception. If thread A calls method enq of object q with parameter x we notate 
+* 1. Each method call has an invocation and a return, that can be a value or an exception. If thread A calls method enq of object q with parameter x we notate 
 ```
 A  q.enq(x)
 ```
@@ -39,7 +39,7 @@ And the return will have the method implicitly described, for example
 A  q:void
 ```
 
-2. A History is a finite set of methods that describe the concurrent execution. A History can have method calls without matching method returns, we say it has pending invocations. We can also focus only on events from a specific thread, creating the object subhistory. For example, 
+* 2. A History is a finite set of methods that describe the concurrent execution. A History can have method calls without matching method returns, we say it has pending invocations. We can also focus only on events from a specific thread, creating the object subhistory. For example, 
 ```
 H | q
 ```
@@ -48,10 +48,10 @@ and we can similarly do thread projections, for example with
 H | B
 ```
 
-3. A history is sequential if we start with a method invocation and each of them is followed by a matching response, the last event being exempt. 
-4. A history is well-formed if all per-thread projects are sequential.
-5. Two histories H and G are equivalent if for all thread A at H we know that H|A = H|B.
-6. A history is legal if for all object x, H|B is the legal sequential specification of x.
+* 3. A history is sequential if we start with a method invocation and each of them is followed by a matching response, the last event being exempt. 
+* 4. A history is well-formed if all per-thread projects are sequential.
+* 5. Two histories H and G are equivalent if for all thread A at H we know that H|A = H|B.
+* 6. A history is legal if for all object x, H|B is the legal sequential specification of x.
 
 ### Linearizability
 Hence, we can say that a History H is linearizable if:
