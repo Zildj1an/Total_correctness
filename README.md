@@ -2,7 +2,7 @@
 
 This repository contains demonstrations on how to prove correctness for both sequential and lock-free concurrent objects.
 
-## 1. Sequential Prove
+## 1. Sequential Proof
 
 File sequential.c is a demonstration on how to mathematically prove a sequential program terminates and its "correct" in the sense of
 total correctness (and partial) of a simple program.
@@ -24,7 +24,7 @@ Let I be invariant, bd boundarie, p precondition, q postcondition and S my progr
   ⊧t {p} S {q}
 ```
 
-## 2. Concurrent Prove (Lock-free objects)
+## 2. Concurrent Proof (Lock-free objects)
 
 It is easy to prove a concurrent object is correct (deadlock freedom, liveness, starvation freedom) if we use locks, as that forces sequential execution. Nevertheless, this is undesirable because there is no Speedup in multiprocessor environments. 
 
